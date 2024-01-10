@@ -1,0 +1,41 @@
+.header {
+  background-color: $Dark-Blue-intro-and-email-sign-up-background;
+  &__navbar {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 5rem;
+    }
+  }
+  &__links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    a {
+      font-size: 0.875em;
+    }
+    a:hover {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__navbar {
+    padding: 80px;
+  }
+  .header__links {
+    gap: 3rem;
+  }
+  .header__logo img {
+    width: 175px;
+  }
+}

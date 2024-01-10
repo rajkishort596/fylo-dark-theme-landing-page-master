@@ -1,0 +1,110 @@
+.footer {
+  background-color: $Dark-Blue-footer-background;
+  width: 100%;
+  &__container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 250px 30px 40px 30px;
+  }
+  &__top {
+    img {
+      width: 175px;
+      margin-bottom: 45px;
+    }
+  }
+  &__bottom {
+    .p_box {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      @media screen and (min-width: 1000px) {
+        align-items: flex-start;
+      }
+      p {
+        line-height: 1.5;
+        letter-spacing: 1px;
+      }
+    }
+    .contact__box {
+      justify-self: center;
+      .phone,
+      .email {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .phone {
+        @media screen and (min-width: 1000px) {
+          margin-top: 0;
+        }
+      }
+    }
+    .left__links {
+      margin-top: 80px;
+      margin-bottom: 60px;
+    }
+    .left__links,
+    .right__links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: all 200ms ease-in-out;
+      a {
+        padding: 10px 0;
+        &:hover {
+          font-weight: 700;
+        }
+      }
+      a:nth-child(1) {
+        padding-top: 0;
+      }
+    }
+  }
+  &__social {
+    margin-top: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 1000px) {
+      margin-top: 0;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+    svg {
+      width: 35px;
+      height: 35px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      padding: 8px;
+      fill: #ffffff;
+      margin-left: 16px;
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        fill: hsl(216, 56%, 9%);
+      }
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    max-width: 1240px;
+    padding: 250px 90px 90px 90px;
+  }
+  .footer__bottom {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 2fr;
+    grid-template-rows: auto;
+  }
+  .footer__bottom .left__links {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
